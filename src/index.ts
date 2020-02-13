@@ -1,23 +1,11 @@
-//
-class SortMe {
-  constructor(public value: Array<number> | string) {}
+import Sorter from './Sorter';
+import NumberCollection from './NumberCollection';
+import StringCollection from './StringCollection';
 
-  sort(): void {
-    const { length } = this.value;
-    if (this.value instanceof Array) {
-      for (let i = 0; i < length; i++) {
-        for (let j = 0; j < length; j++) {
-          if (this.value[j] > this.value[j + 1]) {
-            let tmp = this.value[j];
-            this.value[j] = this.value[j + 1];
-            this.value[j + 1] = tmp;
-          }
-        }
-      }
-    }
-    console.log(this.value);
-  }
-}
+const collection = new NumberCollection([1, 2, 3, 43, 2, 2]);
+const collection2 = new StringCollection('mmakwe');
+const arr = new Sorter(collection);
+const arr2 = new Sorter(collection2);
 
-const arr = new SortMe([2, 3, 50, 56, 2, 667, 75, 7456, 63, 43, 3, 0, 1, 2, 3]);
 arr.sort();
+arr2.sort();
