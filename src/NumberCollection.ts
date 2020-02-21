@@ -1,5 +1,5 @@
 import Sorter from './Sorter';
-import { sortRequirements } from './interfaces/SortRequirement';
+
 class NumberCollection extends Sorter {
   constructor(public data: number[]) {
     super();

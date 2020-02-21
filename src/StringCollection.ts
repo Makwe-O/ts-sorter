@@ -1,5 +1,4 @@
 import Sorter from './Sorter';
-import { sortRequirements } from './interfaces/SortRequirement';
 
 class StringCollection extends Sorter {
   data: string[];
